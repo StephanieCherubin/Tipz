@@ -1,14 +1,17 @@
+let calculate_button = document.getElementById('calculate');
+let bill_amount = document.getElementById('bill_amount');
+let tip_percent = document.getElementById('percent');
+let total = document.getElementById('total');
 
-const n = Math.random() * 100;
 
-console.log(n)
-const m = n.toFixed(2)
-console.log(m);
-console.log(m * 2);
-console.log(Number(m) + 3);
-console.log(typeof m);
-if (typeof m === 'string') {
+calculate_button.onclick = function() {
 
+  // tip amount = calculate bill input times tip input
+  const tip_amount = (bill_amount.value * tip_percent.value/100).toFixed(2);
+  // console.log(tip_percent.value)
+
+  tip.innerHTML = tip_amount
+
+  const total_amount = Number(bill_amount.value) + Number(tip_amount);
+  total.innerHTML = total_amount.toFixed(2);
 }
-
-// Your scripts here

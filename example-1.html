@@ -1,41 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Tip Calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="center">
-      <div class="wrap">
-        <div class="container">
-            <p class="input">
-              <label class="input_label" for="input_amount">Bill</label>
-              <input id="input_amount" type="number" value="0.00">
-            </p>
+    <!-- Tip Calculator -->
+    <div class="tip_calculator_body">
 
-            <p class="input">
-              <label class="input_label" for="percent">Tip %</label>
-              <input class="input_textbox"
-              id="percent" type="number" value="15.00">
-            </p>
+      <div class="calculator-container">
+  			<p class="calculator-input-container">
+  				  <label for="bill_amount">Bill</label>
+  				<input id="bill_amount" type="number" value="0.00">
+  			</p>
 
-            <p class="input">
-              <button id="calculate">Calculate</button>
-            </p>
+  			<div class="calculator-input-container">
+  				  <label for="percent">Tip %</label>
+  				<input id="percent" type="number" value="15">
+  			</div>
 
+  			<p class="tip-percent">
+  			  <button class="calculate-button" id="ten-percent">10%</button>
+  			  <button class="calculate-button" id="fifteen-percent">15%</button>
+  			  <button class="calculate-button" id="eighteen-percent">18%</button>
+  			</p>
 
-            <p class="output">
-              <span>Tip:</span>
-              <span id="tip">0.00%</span>
-            </p>
+  			  <button class="calculate-button" id="calculate">Calculate</button>
+        <br><br>
 
-            <p class="output">
-              <span>Total:</span>
-              <span id="total">$0.00</span>
-            </p>
-        </div>
+  			<div class="calculator-display-container">
+  				<span>Tip:</span>
+  			  <div class="float-right">
+  				  <span id="tip">0.00</span>
+  				</div>
+  			</div>
+
+  			<div class="calculator-display-container">
+  				<span>Total:</span>
+  				<div class="float-right">
+  				  <span id="total">0.00</span>
+  				</div>
+  			</div>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
 </html>

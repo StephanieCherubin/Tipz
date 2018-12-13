@@ -1,45 +1,51 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-weight: 600;
+body {
+	font-family: Helvetica;
+	font-size: 18px;
+  background-color: #eee;
+}
+
+.tip_calculator_body{
+  background-color: #fff;
+  width: 300px;
+  margin: 0 auto;
+}
+.calculate-button {
+	border: 2px solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	font-size: 1em;
+	background-color: #eee;
+}
+
+.calculator-container {
+	width: 240px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.calculator-input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.calculator-input-container > input {
+	border: 2px solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+.calculator-input-container > label {
+	font-size: 0.75em;
+	font-weight: bold;
+	margin: 0.25em;
 
 }
 
-wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-align-items: center;
-width: 250px;
-background-color: lightgray;
-border: 2px solid black;
-justify-content: center;
-border-radius: 10%;
-}
-
-p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: calc(33.33% -20px - 2px);
-    font-family: 'Roboto';
-}
-.center {
-  display: block;
-  margin-left: 34em;
-  margin-right: auto;
-  margin-top: 11em;
-  width: 50%;
-}
-span, label {
-    font-size: 20px;
+.calculator-display-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between
 }
